@@ -11,7 +11,22 @@ namespace CsMainUser
         {
             InitializeComponent();
 
-            int[] data = { 1, 3, 5, 99, 4};
+            BlurEvaluation();
+        }
+
+        public void BlurEvaluation()
+        {
+            string imageName = @"..\images\testImage01.bmp";
+
+            var score = _wr.EvaluateImageBlur(imageName);
+
+            Console.WriteLine($"score is {score}");
+        }
+
+
+        public void aa()
+        {
+            int[] data = { 1, 3, 5, 99, 4 };
             int max = 0;
             int maxIndex = 0;
             int num = data.Length;

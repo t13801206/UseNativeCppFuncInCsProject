@@ -17,6 +17,24 @@ x64:UseNativeCppFuncInCsProject\x64\Debug
 
 CsMainUser->WrapperClass->NativeFunc
 
+## 追加の依存ファイル
+
+opencv_calib3d430d.lib
+opencv_core430d.lib
+opencv_dnn430d.lib
+opencv_features2d430d.lib
+opencv_flann430d.lib
+opencv_gapi430d.lib
+opencv_highgui430d.lib
+opencv_imgcodecs430d.lib
+opencv_imgproc430d.lib
+opencv_ml430d.lib
+opencv_objdetect430d.lib
+opencv_photo430d.lib
+opencv_stitching430d.lib
+opencv_video430d.lib
+opencv_videoio430d.lib
+
 ## システム環境変数
 
 システム環境変数の変更は、再起動後に反映される

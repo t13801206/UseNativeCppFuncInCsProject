@@ -1,7 +1,13 @@
 #include "pch.h"
 #include "NativeFunc.h"
+#include <opencv2/highgui.hpp>
 #include <opencv2/opencv.hpp>
-#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+
+__declspec(dllexport) double Native::EvalLaplaian(char* imageName)
+{
+	return 0.0;
+}
 
 __declspec(dllexport) void Native::Max(int* src, int num, int* mx, int* mxIndex)
 {
@@ -14,16 +20,13 @@ __declspec(dllexport) void Native::Max(int* src, int num, int* mx, int* mxIndex)
         if (src[i] > *mx)
         {
             *mxIndex = i;
-			//*mxIndex = red_img.cols;
-
             *mx = src[i];
         }
     }
 }
 
 __declspec(dllexport) void Native::ImageProcess()
-{
-	
+{	
 	cv::Mat red_img(cv::Size(640, 480), CV_8UC3, cv::Scalar(0, 0, 255));
 	cv::Mat white_img(cv::Size(640, 480), CV_8UC3, cv::Scalar::all(255));
 	cv::Mat black_img = cv::Mat::zeros(cv::Size(640, 480), CV_8UC3);

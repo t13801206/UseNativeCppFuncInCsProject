@@ -130,7 +130,21 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>D:\opencv-4.3.0\build32bit\install\x86\vc14\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_calib3d430d.lib;opencv_core430d.lib;opencv_highgui430d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_calib3d430d.lib;
+opencv_core430d.lib;
+opencv_dnn430d.lib
+;opencv_features2d430d.lib;
+opencv_flann430d.lib
+;opencv_gapi430d.lib
+;opencv_highgui430d.lib
+;opencv_imgcodecs430d.lib
+;opencv_imgproc430d.lib;
+opencv_ml430d.lib;
+opencv_objdetect430d.lib;
+opencv_photo430d.lib;
+opencv_stitching430d.lib;
+opencv_video430d.lib;
+opencv_videoio430d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -228,12 +242,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="NativeOpenCvClass.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="NativeFunc.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="NativeFunc.cpp" />
+    <ClCompile Include="NativeOpenCvClass.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
